@@ -1,0 +1,83 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header, nav, main, aside, section, footer {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f0f0f0;
+}
+
+/* Navigation Flexbox */
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background: #333;
+  padding: 10px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid Layout for Main Content */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Flexbox for Cards Section */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  background: #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin-bottom: 10px;
+  }
+}
